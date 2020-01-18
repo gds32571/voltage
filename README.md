@@ -10,7 +10,7 @@ One of my RPi computers is "crashing" more often than it should.  It's on a Swan
 
 I can run an MQTT monitor to display this message from every computer without having to login to each RPi computer.  The voltage.sh program on the RPi computer is started in a screen so that if the ssh (putty) window closes, the program continues to run and report.
 
-The downside, is that the kern.log file is rotated every 5-10 days so that tail will silently fail.  I need to figure that out.
+The downside, is that the kern.log file is rotated every 5-10 days so that tail will silently fail. ~~I need to figure that out.~~  Oh, the "-F" flag for grep follows by name rather than inode.  Problem solved.
 
 ## updateall
  A script file to copy the files to all computers.  The main proram (voltage.sh) can be edited on one computer, then copied to all the others.  There's no facility to automatically restart.  
