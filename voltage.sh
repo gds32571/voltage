@@ -5,14 +5,13 @@ MQTT_USER="hass"
 MQTT_PASS="hass"
 
 MQTT_TOPIC="voltage/$HOSTNAME"
-PROG_VERSION="1.1"
 
-linex="Program version $PROG_VERSION starting"
+linex="Program starting"
 printf "$linex\n"
 echo $linex | mosquitto_pub -l -h $MQTT_HOST -u $MQTT_USER -P $MQTT_PASS -t $MQTT_TOPIC &
 
 
-tail -F /var/log/kern.log | while read line
+tail -f /var/log/kern.log | while read line
 #tail -f ./junk.log | while read line
 
 do
