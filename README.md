@@ -1,7 +1,7 @@
 # voltage monitor
  Programs to monitor the kern.log file for system voltage messages and report to a central display.
 
-   One of my RPi computers is "crashing" more often than it should. One of the symptoms is that thatRPi computer no longer responds to pins, or ssh connects.  But, according to the deadman blinking LED, the computer is still running. (The UPS would have commanded a reboot if it were not.  Sometimes, rebooting the router will allow new connections to the recalcitrant RPi.  The logs show that there was a problem with the WiFi adapter on the RPi.
+   One of my RPi computers is "crashing" more often than it should.  The network watchdog shows that the RPi and the major programs are not running. Another symptom is that thatRPi computer no longer responds to pings, or ssh connects.  But, according to the deadman blinking LED, the computer <i>is</i> still running. (The UPS would have commanded a reboot if it were not).  Sometimes, rebooting the network <b>router</b> will allow new connections to the recalcitrant RPi.  The logs show that there was a problem with the WiFi adapter on the RPi.  
 
    Bad power is known to cause the RPi WiFi, Ethernet, or USB interfaces to fail without killing the core of the computer. But this failing RPi is on a SwannCo UPS, so power <i>should not</i> be a problem.  But in the logfile, I see messages like <b>Under-voltage detected! (0x00050005)</b>.  Obviously, this requires further investigation.
 
