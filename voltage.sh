@@ -1,11 +1,34 @@
 #!/bin/bash
 
+<< !!!
+multi line comment in bash - neat huh!
+
+18 January 2020 - gswann
+
+definition of the vcgen bits:
+ 0: under-voltage
+ 1: arm frequency capped
+ 2: currently throttled 
+ 3: Soft temperature limit active
+ 16: under-voltage has occurred
+ 17: arm frequency capped has occurred
+ 18: throttling has occurred
+ 19: Soft temperature limit has occurred
+
+ https://harlemsquirrel.github.io/shell/2019/01/05/monitoring-raspberry-pi-power-and-thermal-issues.html
+ https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md
+ 
+ you can also run this command to see the current state of the system throttle  
+ vcgencmd get_throttled
+
+!!!
+
 MQTT_HOST="192.168.2.6"
 MQTT_USER="hass"
 MQTT_PASS="hass"
 
 MQTT_TOPIC="voltage/$HOSTNAME"
-PROG_VERSION="1.1"
+PROG_VERSION="1.2"
 
 linex="Program version $PROG_VERSION starting"
 printf "$linex\n"
@@ -30,20 +53,3 @@ do
 done
    
 
-## definition of the vcgen bits:
-# 0: under-voltage
-# 1: arm frequency capped
-# 2: currently throttled 
-# 3: Soft temperature limit active
-# 16: under-voltage has occurred
-# 17: arm frequency capped has occurred
-# 18: throttling has occurred
-# 19: Soft temperature limit has occurred
-
-# https://harlemsquirrel.github.io/shell/2019/01/05/monitoring-raspberry-pi-power-and-thermal-issues.html
-
-# https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md
- 
-# you can also run this command to see the current state of the system throttle  
-# vcgencmd get_throttled
- 

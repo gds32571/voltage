@@ -1,10 +1,12 @@
 #!/bin/bash
 
+rm *~
+
+scp * pi@rp1:/home/pi/voltage
 scp * pi@rp5:/home/pi/voltage
 scp * pi@rp6:/home/pi/voltage
 scp * pi@zero4:/home/pi/voltage
 scp * pi@zero5:/home/pi/voltage
-scp * pi@rp1:/home/pi/voltage
 
 #scp ./sendfreemem pi@ha32163:/home/pi/freemem/sendfreemem
 
