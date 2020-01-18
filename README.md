@@ -15,6 +15,8 @@ I can run an MQTT monitor to display this message from every computer without ha
 
 The downside, is that the kern.log file is rotated every 5-10 days so that tail will silently fail. ~~I need to figure that out.~~  Oh, the "-F" flag for grep follows by name rather than inode.  Problem solved.
 
+The program does report that it has started and the program version number to the central broker.
+
 ## updateall
  A script file to copy the files to all computers.  The main program (voltage.sh) can be edited on one computer, then copied to all the others.  There's no facility to automatically restart.  
  
@@ -22,5 +24,5 @@ The downside, is that the kern.log file is rotated every 5-10 days so that tail 
   The screen runtime configuration file to run the main program in a screen.
   
  ## 1.sh
-  Run this to start a screen and run the voltage.sh program.
+  Run this script on the client RPi computer to start a screen and run the voltage.sh program.
   
