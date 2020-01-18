@@ -26,3 +26,9 @@ The program does report that it has started and the program version number to th
  ## 1.sh
   Run this script on the client RPi computer to start a screen and run the voltage.sh program.
   
+ ## pi_stat
+   Nice script to tell you several bits of information about the state of your Raspberry Pi.  Be sure to see James' website
+   at:    https://jamesachambers.com/measure-raspberry-pi-undervoltage-true-clock-speeds/
+   
+   
+  
