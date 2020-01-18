@@ -1,0 +1,12 @@
+# 17 Feb 2019
+# gswann
+# taken from:# https://superuser.com/questions/386059/
+
+# no copyright page
+startup_message off
+
+# increase scrollback 
+buffer sizedefscrollback 10000
+
+# now create windows
+screen -t voltage ./voltage.sh
